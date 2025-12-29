@@ -1,24 +1,26 @@
 # ✨ Sharder — Full‑Stack Next.js Application
 
-## 🧠 معرفی پروژه
+## 🧠 Project overview
 
-**Sharder** یک پروژه‌ی فول‌استک مدرن و حرفه‌ای است که با استفاده از **Next.js (App Router)** و **Tailwind CSS v4** توسعه داده شده و تمرکز اصلی آن بر روی **Performance بالا، معماری تمیز، مقیاس‌پذیری، تجربه کاربری روان و سئوی استاندارد** می‌باشد.
+Sharder is a modern, high-performance full-stack web application built with Next.js (App Router) and Tailwind CSS v4.
 
-این پروژه با بهره‌گیری از جدیدترین نسخه‌های React و Next.js طراحی شده و برای استفاده در پروژه‌های Production‑Ready کاملاً مناسب است.
+The project is designed with a strong focus on OOP & scalability, clean architecture, developer experience, performance optimization, and SEO best practices.
+
+Leveraging the latest versions of React and Next.js, Sharder follows production-grade standards and is well-suited for real-world, enterprise-level applications.
 
 ---
 
 ## 🚀 Tech Stack
 
-* **Framework:** Next.js 16 (App Router)
-* **UI / Styling:** Tailwind CSS v4 + Material UI
-* **Language:** JavaScript
-* **Architecture:** Full‑Stack (Server Actions / API Routes)
-* **State & Forms:** React Hook Form + Zod
-* **Animation:** Framer Motion + Lottie
-* **SEO:** next-sitemap , Metadatas 
-* **Email Service:** Nodemailer
-* **Validation:** Zod
+- **Framework:** Next.js 16 (App Router)
+- **UI / Styling:** Tailwind CSS v4 + Material UI
+- **Language:** JavaScript
+- **Architecture:** Full‑Stack (Server Actions / API Routes)
+- **State & Forms:** React Hook Form + Zod
+- **Animation:** Framer Motion + Lottie
+- **SEO:** next-sitemap , Metadatas
+- **Email Service:** Nodemailer
+- **Validation:** Zod
 
 ---
 
@@ -28,40 +30,40 @@
 
 ### UI & UX
 
-* Material UI
-* Tailwind CSS v4
-* Lucide Icons / React Icons / FontAwesome
-* Swiper (Slider)
-* Framer Motion
-* Lottie Animations
+- Material UI
+- Tailwind CSS v4
+- Lucide Icons / React Icons / FontAwesome
+- Swiper (Slider)
+- Framer Motion
+- Lottie Animations
 
 ### Forms & Validation
 
-* React Hook Form
-* @hookform/resolvers
-* Zod
-* Google reCAPTCHA
+- React Hook Form
+- @hookform/resolvers
+- Zod
+- Google reCAPTCHA
 
 ### Utilities & Services
 
-* Nodemailer (Email Service)
-* dotenv
-* next-sitemap
-* iran-city
+- Nodemailer (Email Service)
+- dotenv
+- next-sitemap
+- iran-city
 
 ---
 
 ## 🧩 Features
 
-* ✅ Full‑Stack Architecture
-* ✅ App Router (Latest Next.js Standard)
-* ✅ Fully Responsive Design
-* ✅ SEO Optimized
-* ✅ High Performance (Lighthouse Friendly)
-* ✅ Modern Animations & Micro‑Interactions
-* ✅ Form Validation & Secure Inputs
-* ✅ Email Sending System
-* ✅ Clean Folder Structure
+- ✅ Full‑Stack Architecture
+- ✅ App Router (Latest Next.js Standard)
+- ✅ Fully Responsive Design
+- ✅ SEO Optimized
+- ✅ High Performance (Lighthouse Friendly)
+- ✅ Modern Animations & Micro‑Interactions
+- ✅ Form Validation & Secure Inputs
+- ✅ Email Sending System
+- ✅ Clean Folder Structure
 
 ---
 
@@ -81,18 +83,18 @@ npm run postbuild # Generate sitemap
 
 در طراحی این پروژه تلاش شده تا:
 
-* از **Minimal JavaScript** استفاده شود
-* ساختار پوشه‌ها **خوانا و مقیاس‌پذیر** باشد
-* کامپوننت‌ها **Reusable** و تمیز نوشته شوند
-* Performance در Lighthouse به حداکثر برسد
-* تجربه توسعه‌دهنده (DX) در سطح بالا حفظ شود
+- از **Minimal JavaScript** استفاده شود
+- ساختار پوشه‌ها **خوانا و مقیاس‌پذیر** باشد
+- کامپوننت‌ها **Reusable** و تمیز نوشته شوند
+- Performance در Lighthouse به حداکثر برسد
+- تجربه توسعه‌دهنده (DX) در سطح بالا حفظ شود
 
 ---
 
 ## 🛠️ Installation
 
 ```bash
-npm install or npm i 
+npm install or npm i
 npm run dev
 ```
 

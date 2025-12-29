@@ -8,7 +8,7 @@ export async function POST(request) {
     const data = await request.json();
     const { fullName, mobile, q1, q2, q3, q4, q5 } = data;
 
-    // اعتبارسنجی اولیه
+
     if (!fullName || !mobile || !q1 || !q2 || !q3 || !q4 || !q5) {
       return new Response(
         JSON.stringify({ message: "لطفاً نام، موبایل و همه گزینه‌ها را وارد کنید" }),
@@ -16,18 +16,17 @@ export async function POST(request) {
       );
     }
 
-    // کانفیگ SMTP
+
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: 587,
-      secure: false, // TLS روی 587
+      secure: false, 
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
     });
 
-    // ساخت HTML ایمیل
     const htmlMessage = `
       <div dir="rtl" style="background-color:#fff;padding:32px;font-family:Tahoma,sans-serif;max-width:600px;margin:auto;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
         <div style="background-color:#fb923c;color:#fff;padding:20px;border-radius:8px 8px 0 0;">
@@ -48,7 +47,7 @@ export async function POST(request) {
       </div>
     `;
 
-    // ارسال ایمیل
+
     await transporter.sendMail({
       from: `"فرم نظرسنجی" <${process.env.SMTP_USER}>`,
       to: process.env.RECEIVER_EMAIL,

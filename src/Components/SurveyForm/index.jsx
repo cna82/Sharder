@@ -133,7 +133,7 @@ const SurveyForm = () => {
 
   return (
     <Box
-      sx={{ py: { xs: 3, md: 5 }, px: { xs: 1, sm: 2 }, minHeight: "100vh", backgroundColor: "#ffffff" }}
+      sx={{ fontFamily: "inherit", py: { xs: 3, md: 5 }, px: { xs: 1, sm: 2 }, minHeight: "100vh", backgroundColor: "grey.200" }}
     >
       <Box
         ref={formRef}

@@ -5,9 +5,8 @@ export const metadata = {
   description: " صفحه درخواست خدمات  سایت شاردر  و تولید کننده قطعات صنعتی  و چرخ گوشت ",
 };
 import ServiceRequestForm from "@/Components/ServiceRequestForm";
-import HeroSectionServices from "@/Components/HeroSectionServices";  // مسیر کامپوننت هیرو سکشن شما
-       // فرض کردیم فرم‌ها توی این فولدر هستند
-
+import HeroSectionServices from "@/Components/HeroSectionServices";  
+  
 export default function SurveyPage() {
   return (
     <main>

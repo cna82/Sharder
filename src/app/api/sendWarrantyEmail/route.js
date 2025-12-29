@@ -2,7 +2,7 @@
 // app/api/sendWarrantyEmail/route.js
 import nodemailer from "nodemailer";
 import dotenv from "dotenv";
-import { products } from "@/lib/data/products";  // آرایه محصولات به صورت JSON
+import { products } from "@/lib/data/products";  
 
 dotenv.config();
 
@@ -24,13 +24,12 @@ export async function POST(request) {
       );
     }
 
-    // 🔍 پیدا کردن محصول از آرایه و استخراج عنوان
     const matched = products.find((p) => String(p.id) === String(productId));
     const productTitle = matched
       ? matched.title
       : `شناسه محصول: ${productId}`;
 
-    // ساختار transport برای ارسال ایمیل
+
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT) || 587,
@@ -41,9 +40,6 @@ export async function POST(request) {
       },
     });
 
-
-
-    // ساخت محتوای HTML ایمیل با عنوان محصول
     const htmlMessage = `
       <div dir="rtl" style="padding:20px;font-family:Tahoma,sans-serif;">
         <h2>📄 فرم ثبت گارانتی</h2>
@@ -56,14 +52,12 @@ export async function POST(request) {
       </div>
     `;
 
-    // ارسال ایمیل
     const info = await transporter.sendMail({
       from: `"فرم گارانتی" <${process.env.SMTP_USER}>`,
       to: process.env.RECEIVER_EMAIL,
       subject: "🛠️ ثبت گارانتی جدید",
       html: htmlMessage,
     });
-
 
     return new Response(
       JSON.stringify({ message: "گارانتی با موفقیت ثبت شد" }),

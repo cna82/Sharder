@@ -6,7 +6,9 @@ import { useEffect, useState } from "react";
 const ScrollProgress = () => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
   const pathname = usePathname();
-
+  const routeRegex =
+    /^\/(?:$|products(?:$|\/.+)|contact|about|services\/(?:complaint|survey|warranty|service-request|service-agencies))$/;
+  if (!routeRegex.test(pathname)) return null;
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;

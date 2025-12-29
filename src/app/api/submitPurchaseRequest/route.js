@@ -17,12 +17,11 @@ export async function POST(request) {
       description
     } = data;
 
-    // اعتبارسنجی
     if (!fullName || !mobile || !provinceTitle || !cityTitle || !productTitle || !description) {
       return new Response(JSON.stringify({ message: "لطفاً همهٔ فیلدهای ضروری را تکمیل کنید" }), { status: 400, headers:{ "Content-Type":"application/json" } });
     }
 
-    // ساخت HTML ایمیل
+
     const htmlMessage = `
       <div dir="rtl" style="font-family:Tahoma; padding:20px; max-width:600px; margin:auto;">
         <h2 style="color:#2563eb; border-bottom:1px solid #eee; padding-bottom:10px;">

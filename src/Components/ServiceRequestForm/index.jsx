@@ -180,7 +180,7 @@ const ServiceRequestForm = () => {
     <Box sx={{
       py: 6,
       px: 2,
-      backgroundColor: "#ffffff",
+      backgroundColor: "grey.200",
       minHeight: "100vh"
     }}>
       <Box sx={{

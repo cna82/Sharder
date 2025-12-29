@@ -10,7 +10,6 @@ import GutranteeSection from "@/Components/GuranteeSection";
 const AgencyPage = () => {
     return (
         <main>
-            {/* <HeroSectionServices title=" ثبت شکایت" /> */}
             <GutranteeSection/>
             <AgencyTable />
         </main>

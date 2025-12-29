@@ -1,12 +1,11 @@
 // app/api/sendComplaintEmail/route.js
 import nodemailer from "nodemailer";
 
-
 export async function POST(request) {
   try {
     const { fullName, mobile, province, city, complaint } = await request.json();
 
-    // اعتبارسنجی ساده
+ 
     if (!fullName || !mobile || !province || !city || !complaint) {
       return new Response(
         JSON.stringify({ message: "لطفاً همه فیلدها را تکمیل کنید" }),
@@ -14,18 +13,16 @@ export async function POST(request) {
       );
     }
 
-    // ساخت transporter با تنظیمات SMTP
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT || 587),
-      secure: false, // TLS روی 587
+      secure: false, 
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
     });
 
-    // ساخت متن HTML ایمیل
     const html = `
       <div dir="rtl" style="font-family:Tahoma,sans-serif; max-width:600px; margin:auto; padding:20px; background:#fff; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
         <h2 style="color:#fb923c; margin-bottom:16px;">📨 فرم ثبت شکایت</h2>
@@ -43,7 +40,6 @@ export async function POST(request) {
       </div>
     `;
 
-    // ارسال ایمیل
     await transporter.sendMail({
       from: `"فرم شکایت" <${process.env.SMTP_USER}>`,
       to: process.env.RECEIVER_EMAIL,

@@ -1,4 +1,3 @@
-
 import { getProductById } from "@/lib/data/products";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,12 +8,11 @@ export async function generateMetadata({ params: paramsPromise }) {
   const params = await paramsPromise;
   const { id } = params;
   const product = await getProductById(id);
-
-  // اگر محصول پیدا نشد
   if (!product) {
     return {
       title: "محصول یافت نشد - شاردر",
-      description: "این محصول در شاردر یافت نشد. لطفا محصولات دیگر را مشاهده کنید.",
+      description:
+        "این محصول در شاردر یافت نشد. لطفا محصولات دیگر را مشاهده کنید.",
       robots: "noindex, nofollow",
       alternates: {
         canonical: "https://sharder.ir/products",
@@ -22,14 +20,14 @@ export async function generateMetadata({ params: paramsPromise }) {
     };
   }
 
-  // ساخت توضیح مختصر از ویژگی‌ها
   const descriptionText = product.description
     .map((feature) => feature.title)
     .join("، ")
     .slice(0, 160);
 
-  // ساخت آدرس کامل برای تصویر
-  const fullImageUrl = `https://sharder.ir${product.imgSrc.startsWith("/") ? product.imgSrc : "/" + product.imgSrc}`;
+  const fullImageUrl = `https://sharder.ir${
+    product.imgSrc.startsWith("/") ? product.imgSrc : "/" + product.imgSrc
+  }`;
 
   return {
     title: `${product.title} | شاردر`,
@@ -48,7 +46,7 @@ export async function generateMetadata({ params: paramsPromise }) {
       siteName: "شاردر",
       images: [
         {
-          url: fullImageUrl, // آدرس کامل تصویر
+          url: fullImageUrl,
           width: 600,
           height: 600,
           alt: product.title,
@@ -60,20 +58,17 @@ export async function generateMetadata({ params: paramsPromise }) {
       card: "summary_large_image",
       title: `${product.title} | شاردر`,
       description: descriptionText,
-      images: [fullImageUrl], // آدرس کامل تصویر
+      images: [fullImageUrl],
       creator: "@sharder_ir",
     },
   };
 }
-
-
 const ProductPage = async ({ params: paramsPromise }) => {
-  const params = await paramsPromise; // مهم: await کردن params
+  const params = await paramsPromise;
   const product = await getProductById(params.id);
   if (!product) return redirect("/products");
-
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-300 via-sky-400 to-sky-200 mt-10 py-12">
+    <div className="min-h-screen bg-linear-to-b from-blue-300 via-sky-400 to-sky-200 mt-8 py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
           <div className="grid md:grid-cols-2 gap-0" dir="ltr">
@@ -97,7 +92,7 @@ const ProductPage = async ({ params: paramsPromise }) => {
                 <h1 className="font-DimaYekanBold md:text-3xl text-2xl text-center font-bold text-sky-500 mb-2">
                   {product.title}
                 </h1>
-                <div className="h-[2px] w-full bg-sky-200 rounded-full"></div>
+                <div className="h-0.5 w-full bg-sky-200 rounded-full"></div>
               </div>
 
               <div className="space-y-4">

@@ -34,6 +34,7 @@ const AgentTable = () => {
             overscrollBehaviorX: 'contain',
             willChange: 'transform',
             padding: '0 16px',
+            fontFamily: "inherit"
           }}
         >
           <h2

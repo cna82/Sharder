@@ -168,7 +168,7 @@ export default function ComplaintForm() {
   );
 
   return (
-    <Box sx={{ py: 5, px: 2, minHeight: "100vh", backgroundColor: "#ffffff" }}>
+    <Box sx={{ py: 5, px: 2, minHeight: "100vh", backgroundColor: "grey.200" }}>
       <Box sx={{ maxWidth: 600, mx: "auto", bgcolor: "#ffffff", p: 4, borderRadius: 3, boxShadow: "0 4px 12px rgba(0,0,0,0.1)", border: "1px solid #e5e7eb" }}>
         <Typography variant="h4" sx={{ fontWeight: 700, mb: 3, textAlign: "center", color: "#000000" }}>
           فرم ثبت شکایت

@@ -7,7 +7,7 @@ const MotionSection = () => {
   return (
     <>
       <motion.h2
-        className="text-xl md:text-2xl font-semibold text-sky-500 mb-4"
+        className="text-xl md:text-2xl font-semibold text-purple-500 mb-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.5 }}
@@ -16,7 +16,7 @@ const MotionSection = () => {
       </motion.h2>
 
       <motion.p
-        className="text-sky-500 text-base md:text-lg leading-relaxed max-w-xl mb-6"
+        className="text-purple-500 text-base md:text-lg leading-relaxed max-w-xl mb-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.4 }}
@@ -32,7 +32,7 @@ const MotionSection = () => {
       >
         <Link
           href="/"
-          className="bg-white hover:bg-white text-sky-600 font-bold py-3 px-6 rounded-full transition-all duration-300 shadow-lg"
+          className="bg-white hover:bg-white text-purple-600 font-bold py-3 px-6 rounded-full transition-all duration-300 shadow-lg"
         >
           بازگشت به خانه
         </Link>

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://sharder.ir
+
+# Sitemaps
+Sitemap: https://sharder.ir/sitemap.xml

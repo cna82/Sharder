@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@import 'swiper/css';
+@import 'swiper/css/effect-coverflow';
+@import 'swiper/css/pagination';
+@import 'swiper/css/navigation';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Vazir", Arial, Helvetica, sans-serif;
+  padding-top: 50px !important;
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('/fonts/Vazir.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IranNastaliq';
+  src: url('/fonts/IranNastaliq.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-IranNastaliq {
+  font-family: "IranNastaliq", 'Vazir', Arial, Helvetica, sans-serif !important;
+}
+
+@font-face {
+  font-family: 'DimaYekanBold';
+  src: url('/fonts/DimaYekanWebBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-DimaYekanBold {
+  font-family: 'DimaYekanBold', 'Vazir', 'iphone', Arial, Helvetica, sans-serif !important;
+}
+
+@keyframes scale-fade {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-fade {
+  animation: scale-fade 0.8s ease-out;
+}
+
+.swiper-slide {
+  opacity: 0.4;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+.swiper-slide.swiper-slide-active {
+  opacity: 1 !important;
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #5fc7f7 !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #0b78aa !important;
+}

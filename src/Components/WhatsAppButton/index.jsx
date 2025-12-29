@@ -5,7 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 // whatsapp btn comp
 
 const WhatsAppButton = () => {
-  const phoneNumber = "+989128433187"; // شماره موبایل با پیش‌شماره کشور (بدون +)
+  const phoneNumber = "+989121001010";
 
   return (
     <a
